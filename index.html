@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1 class="title">Pomodoro Timer</h1>
+    </header>
+
+    <section class="progress-ring">
+      <svg width="160" height="160">
+        <circle id="progress-bg" r="70" cx="80" cy="80" stroke-width="10" stroke="#eee" fill="transparent" />
+        <circle id="progress" r="70" cx="80" cy="80" stroke-width="10" stroke="#6c5ce7" fill="transparent"
+          stroke-linecap="round" stroke-dasharray="440" stroke-dashoffset="0" />
+      </svg>
+    </section>
+
+    <section id="timer" class="timer-display">25:00</section>
+
+    <section class="buttons">
+      <button id="start" class="btn">Start</button>
+      <button id="pause" class="btn">Pause</button>
+      <button id="reset" class="btn">Reset</button>
+    </section>
+
+    <section class="controls">
+      <button id="themeToggle" class="btn">Toggle Theme</button>
+      <label class="music-label">
+        <input type="checkbox" id="musicToggle" />  Focus Music
+      </label>
+    </section>
+
+    <section id="cycleLog" class="cycle-log">
+      Completed Pomodoros:
+      <ul id="logList"></ul>
+    </section>
+
+    <audio id="beep" src="{{ url_for('static', filename='beep.mp3') }}"></audio>
+    <audio id="focusMusic" src="{{ url_for('static', filename='focus.mp3') }}"></audio>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeModal" class="close">&times;</button>
+        <p id="modalText">Take a break!</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
