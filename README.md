@@ -57,4 +57,4 @@ ex:http://127.0.0.1:5000
 
 📸 Screenshot
 
-![Pomodoro UI](Screenshot.png)
+![Pomodoro UI](screenshot.png)
