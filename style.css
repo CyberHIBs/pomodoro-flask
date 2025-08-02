@@ -160,4 +160,17 @@ body.dark-mode .modal-content {
         opacity: 1;
         transform: translateY(0);
     }
+
+}
+/* Default time styling */
+#time {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Light mode time styling */
+.light-mode #time {
+  color: black;
 }
