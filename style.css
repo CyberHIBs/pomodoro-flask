@@ -160,10 +160,9 @@ body.dark-mode .modal-content {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 #timer {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 48px;
   text-align: center;
   transition: color 0.3s ease;
@@ -176,5 +175,12 @@ body.dark-mode .modal-content {
 .dark-mode #timer {
   color: white;
 }
-
-
+#timer-container {
+  border: 3px solid purple;
+  border-radius: 16px;
+  padding: 20px;
+  display: inline-block;
+  margin: 20px auto;
+  background-color: rgba(128, 0, 128, 0.05); /* subtle purple background */
+  box-shadow: 0 4px 12px rgba(128, 0, 128, 0.3);
+}
