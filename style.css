@@ -162,12 +162,19 @@ body.dark-mode .modal-content {
     }
 
 }
-#time {
-  color: white !important;
+#timer {
+  color: white;
+  font-size: 48px;
+  text-align: center;
   transition: color 0.3s ease;
 }
 
-.light-mode #time {
-  color: black !important;
+.light-mode #timer {
+  color: black;
 }
+
+.dark-mode #timer {
+  color: white;
+}
+
 
